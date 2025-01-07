@@ -111,8 +111,5 @@
 
 - 版权所有 © [ThemeSelection](https://themeselection.com/)
 - 根据 [MIT 许可证](LICENSE) 许可
-- 我们所有的免费项目都是开源的，遵循 MIT 许可证。你可以将我们的免费项目用于个人和商业用途。我们只需要你在项目的底部注明归属。复制以下链接并粘贴到你的网页应用或项目的页脚。
-   ```html
-  <a href="https://themeselection.com/">ThemeSelection</a>
   ```
 # schoolele🏫
