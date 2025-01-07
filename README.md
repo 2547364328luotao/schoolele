@@ -29,7 +29,7 @@
    </a>
 </p>
 
-<kbd>[![Sneat – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.themeselection.com/ts-assets/sneat/sneat-vuetify-vuejs-admin-template-free/marketing/sneat-vuetify-vuejs-admin-template-free-github.png)](https://themeselection.com/item/sneat-free-vuetify-vuejs-admin-template/)</kbd>
+<!-- <kbd>[![Sneat – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.themeselection.com/ts-assets/sneat/sneat-vuetify-vuejs-admin-template-free/marketing/sneat-vuetify-vuejs-admin-template-free-github.png)](https://themeselection.com/item/sneat-free-vuetify-vuejs-admin-template/)</kbd> -->
 
 ## 介绍 🚀
 
