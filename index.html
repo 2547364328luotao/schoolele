@@ -1,0 +1,60 @@
+<!--
+ * @Author: 2547364328luotao 2547364328@qq.com
+ * @Date: 2025-01-01 04:37:54
+ * @LastEditors: 2547364328luotao 2547364328@qq.com
+ * @LastEditTime: 2025-01-04 18:04:05
+ * @FilePath: \javascript-version\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velocity - Vuetify Vuejs Admin Template</title>
+  <link rel="stylesheet" type="text/css" href="/loader.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div id="loading-bg">
+      <div class="loading-logo">
+        <!-- SVG Logo -->
+        <svg width="200px" height="100px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <title>file_type_bolt</title>
+          <defs>
+            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#81FBB8; stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#28C76F; stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M9.012,2H22.979q-2.787,5.6-5.593,11.194,2.8.014,5.6.009-4.9,8.4-9.794,16.8c-.019-4.192-.009-8.375-.009-12.567-1.391,0-2.782,0-4.173-.009Z"
+            fill="url(#greenGradient)" />
+        </svg>
+
+
+      </div>
+      <div class="loading">
+        <div class="effect-1 effects"></div>
+        <div class="effect-2 effects"></div>
+        <div class="effect-3 effects"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    const loaderColor = localStorage.getItem('sneat-initial-loader-bg') || '#FFFFFF'
+    const primaryColor = localStorage.getItem('sneat-initial-loader-color') || '#28C76F'
+
+    if (loaderColor)
+      document.documentElement.style.setProperty('--initial-loader-bg', loaderColor)
+
+    if (primaryColor)
+      document.documentElement.style.setProperty('--initial-loader-color', primaryColor)
+  </script>
+</body>
+
+</html>
