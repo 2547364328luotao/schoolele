@@ -18,6 +18,9 @@ export const useDataStore = defineStore('dataStore', () => {
   const secondSlice = ref([]); // Rpt72后一部分数据
   //存放天气信息
   const weatherData = ref({});
+  //存放排行榜信息
+  const rankData = ref([]);
+
 
   // 计算当前房间ID
   const roomId = computed(() => roomStore.roomId);
@@ -49,6 +52,10 @@ export const useDataStore = defineStore('dataStore', () => {
   //天气API获取
   const getWeatherURL = computed(() => {
     return `https://devapi.qweather.com/v7/weather/now?location=101200101&key=e0158e106d554e0183de43f9cc3bf40f`;
+  });
+  //获取排行榜API
+  const getRankURL = computed(() => {
+    return `http://113.45.174.255:49152/https://schoolelectrapi.20050508.xyz/api/list`;
   });
 
   // 定义异步方法：获取天气数据
@@ -82,8 +89,6 @@ export const useDataStore = defineStore('dataStore', () => {
       console.error('获取Balance数据时出错:', error);
     }
   };
-  //打印roomData
-  console.log("roomData:JSON.stringify(roomData.value):", roomData);
 
   // 异步方法：获取Rpt72数据
   const fetchRpt72 = async () => {
@@ -103,12 +108,24 @@ export const useDataStore = defineStore('dataStore', () => {
       console.error('获取Rpt72数据时出错:', error);
     }
   };
+  // 定义方法：获取排行榜数据
+  const fetchRank = async () => {
+    try {
+      const response = await fetch(getRankURL.value); // 发起网络请求获取数据
+      const data = await response.json(); // 将响应体解析为JSON格式
+      rankData.value = data;
+      console.log('获取到的排行榜数据:', data);
+    } catch (error) {
+      console.error('获取排行榜数据时出错:', error);
+    }
+  };
 
   // 初始化时自动调用API获取数据
   const initialize = async () => {
     await fetchBalance();
     await fetchRpt72();
     await fetchWeather();
+    await fetchRank();
   };
 
   // 监视roomId和formattedToday的变化，以便重新获取数据
@@ -121,6 +138,7 @@ export const useDataStore = defineStore('dataStore', () => {
     await fetchBalance();
     await fetchRpt72();
     await fetchWeather();
+    await fetchRank();
   };
 
   return {
@@ -131,6 +149,7 @@ export const useDataStore = defineStore('dataStore', () => {
     firstSlice,
     secondSlice,
     weatherData,
+    rankData,
     refreshData,
   };
 });

@@ -118,7 +118,7 @@ watch(weatherData, (newValue) => {
                   <v-icon class="text-unit" style="color: #808080;">bx-cloud</v-icon>
                 </v-col>
                 <v-col cols="2" v-else-if="text==='多云'">
-                  <v-icon class="text-unit" style="color: #808080;">google-cloud</v-icon>
+                  <v-icon class="text-unit" style="color: #808080;">bx-google-cloud</v-icon>
                 </v-col>
                 <v-col cols="2" v-else-if="text==='雨'">
                   <v-icon class="text-unit" style="color: #4682B4;">bx-cloud-light-rain</v-icon>
@@ -140,9 +140,9 @@ watch(weatherData, (newValue) => {
       </VRow>
     </VCol>
 
-    <!-- 👉 Order Statistics -->
+        <!-- 👉 Transactions -->
     <VCol cols="12" md="4" sm="6" order="3">
-      <AnalyticsOrderStatistics />
+      <AnalyticsTransactions />
     </VCol>
 
     <!-- 👉 Tabs chart -->
@@ -150,9 +150,9 @@ watch(weatherData, (newValue) => {
       <AnalyticsFinanceTabs />
     </VCol>
 
-    <!-- 👉 Transactions -->
+    <!-- 👉 Order Statistics -->
     <VCol cols="12" md="4" sm="6" order="3">
-      <AnalyticsTransactions />
+      <AnalyticsOrderStatistics />
     </VCol>
   </VRow>
 </template>
